@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1.1"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/search_editText"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:hint="@string/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/search_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:backgroundTint="#9C27B0"
+            android:text="@string/search" />
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/play_list_scroll"
+        android:layout_weight="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/play_list"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/search_result_scroll"
+        android:layout_weight="0.3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/search_result"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nowMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#9C27B0"
+            android:maxLines="1"
+            android:text="当前播放：">
+
+        </TextView>
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.6"
+
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/preMusic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:backgroundTint="#9C27B0"
+                android:text="上一首" />
+
+            <Button
+                android:id="@+id/playlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:backgroundTint="#9C27B0"
+                android:text="播放队列"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/playMusic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:backgroundTint="#9C27B0"
+                android:text="播放音乐"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/nextMusic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:backgroundTint="#9C27B0"
+                android:text="下一首" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
